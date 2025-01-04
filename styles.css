@@ -92,3 +92,8 @@ a {
     color: darkblue;
     text-decoration: none;
 }
+.al{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

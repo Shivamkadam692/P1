@@ -5,7 +5,7 @@
     font-family: Arial, Helvetica, sans-serif;
 }
 body {
-    background-color: #bfd377;
+    background-color: hsl(73, 51%, 65%);
 }
 .wrapper {
     width: 100%;
@@ -92,7 +92,46 @@ input:checked + label .description {
 .card[for="c5"] {
     background-image: url(img2.JPG);
 }
-.container{
+button:hover{
+    display: flex;
     transition: 0.5s;
     cursor: pointer;
+
+}@keyframes fadeInScale {
+    0% {
+        opacity: 0;
+        transform: scale(0.8);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+video {
+    width: 200%;
+    max-width: 500px; 
+    border-radius: 1rem;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    margin: 20px auto; 
+    display: block; 
+    background-color: #c4d45a;
+    outline: none;
+    animation: fadeInScale 0.6s ease-in-out;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+video:hover {
+    transform: scale(1.05);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+}
+
+.video-container {
+    display: flex;
+    justify-content: top;
+    align-items: top;
+    padding: 10px;
+    background-color: hsl(73, 51%, 65%); 
+    border-radius: 1rem;
+    animation: fadeInScale 1s ease-in-out;
 }
