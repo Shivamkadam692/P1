@@ -5,7 +5,7 @@
     font-family: Arial, Helvetica, sans-serif;
 }
 body {
-    background-color: #eeeeea;
+    background-color: #bfd377;
 }
 .wrapper {
     width: 100%;
@@ -91,4 +91,8 @@ input:checked + label .description {
 }
 .card[for="c5"] {
     background-image: url(img2.JPG);
+}
+.container{
+    transition: 0.5s;
+    cursor: pointer;
 }
