@@ -141,7 +141,7 @@ button span {
     font-size: 16px;
     display: flex;
     padding: 10px;
-    border-radius:100px;
+    border-radius:100girpx;
     /* background-color: #1abc9c; */
     justify-content: center;
     align-items: center;
@@ -234,18 +234,3 @@ button span {
     }
 }
 
-/* Large Devices (Tablets and Up) */
-@media (min-width: 1024px) {
-    .navbar {
-        flex-direction: row;
-    }
-
-    .content h2 {
-        font-size: 60px;
-    }
-
-    button {
-        font-size: 16px;
-        padding: 10px 20px;
-    }
-}
