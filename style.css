@@ -2,43 +2,44 @@
 * {
     margin: 0;
     padding: 0;
-    font-family: sans-serif;
+    box-sizing: border-box;
 }
 
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-image: linear-gradient(rgba(129, 120, 120, 0.75), rgba(136, 124, 124, 0.75)), url(IMG12.jpg);
+
+}
 
 .banner {
-    width: 100%;
-    height: 100vh;
-    background-image: linear-gradient(rgba(129, 120, 120, 0.75), rgba(136, 124, 124, 0.75)), url(IMG12.jpg);
-    background-size: cover;
-    background-position: center;
-    position: relative;
+    
+        width: 100%;
+        height: 100vh;
+        background-image: linear-gradient(rgba(129, 120, 120, 0.75), rgba(136, 124, 124, 0.75)), url(IMG12.jpg);
+        background-size: cover;
+        background-position: center;
+        position: relative;
 }
 
 .navbar {
-    width: 100%;
-    margin: auto;
-    padding: 20px 10px;
-    display: flex;
     align-items: center;
     justify-content: space-between;
-    position: absolute;
-    top: 0;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+    display: flex;
 }
 
 .Logo {
-    width: 150px;
-    height: 110px;
-    cursor: pointer;
+    width: 50px;
+    height: auto;
 }
 
-.navbar h1 {
-    font-size: 16px;
-    text-align: center;
-    color: #000000;
-    margin-top: 10px;
+h1 {
+    font-size: 14px;
+    margin-left: 10px;
+    flex-grow: 1;
 }
-
 .navbar ul {
     display: flex;
     list-style: none;
@@ -48,7 +49,7 @@
 
 .navbar ul button {
     padding: 15px;
-    text-align: center;
+    text-align: left;
     margin: 10px;
     border-radius: 50px;
     font-weight: bold;
@@ -59,24 +60,6 @@
     position: relative;
     overflow: hidden;
 }
-
-.navbar ul button a {
-    color: #fff;
-    text-decoration: none;
-}
-
-.navbar ul button span {
-    background: #009688;
-    height: 100%;
-    width: 0;
-    border-radius: 25px;
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    z-index: -1;
-    transition: 0.5s;
-}
-
 .navbar ul button:hover span {
     width: 100%;
 }
@@ -85,14 +68,50 @@
     border: none;
 }
 
+.navbar ul button {
+    width: 70px;
+    padding: 4px 0px;
+    padding-right: 27px;
+    text-align: right;
+    margin: 1px 1px;
+    border-radius: 50px;
+    font-weight: bold;
+    border: 2px solid #009688;
+    background: transparent;
+    color: #fff;
+    cursor: pointer;
+    position: relative;
+    right: 20px;
+    overflow: hidden;
+}
+
+
+.navbar ul {
+    list-style: none;
+    display: inline;
+    gap: 20px;
+    position: relative;
+    left: 25px;
+    top: 12px;
+    
+}
+
+
+
+
+button a {
+    text-decoration: none;
+    color: white;
+}
+
+
+button span {
+    margin-right: 10px;
+}
 
 .content {
-    width: 100%;
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
     text-align: center;
-    color: #fff;
+    margin-top: 20px;
 }
 
 .content h2 {
@@ -101,120 +120,132 @@
     text-shadow: 1px 1px 2px black;
 }
 
-.content p {
-    margin: 20px auto;
-    font-weight: 100;
-    line-height: 25px;
-}
-
 
 .side {
-    position: absolute;
-    top: 70%;
-    left: 50%;
-    transform: translateX(-50%);
-    display: flex;
-    flex-direction: row;
-    align-items: center;
+    padding: 20px;
+    margin-top: 20px;
+    border-radius: 8px;
 }
 
 .side ul {
     list-style: none;
-    padding: 0;
 }
 
-.side ul li {
-    margin: 10px;
+.side li {
+    margin: 10px 0;
 }
 
-.side ul li a {
-    color: #fff;
+.side a {
     text-decoration: none;
-    padding: 10px 20px;
-    border-radius: 20px;
-    font-size: 18px;
+    color: #ecf0f1;
+    font-size: 16px;
+    display: flex;
+    padding: 10px;
+    border-radius:100px;
+    /* background-color: #1abc9c; */
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    top: 10px;
+}
+
+.side a:hover {
+    background-color: #ef5017;
 }
 
 
-@media (max-width: 768px) {
-  
+/* Small Devices (Mobile Portrait) */
+@media (max-width: 600px) {
     .navbar {
-        flex-direction: column;
-        align-items: center;
+        
+        display: flex;
     }
 
-    .navbar h1 {
+    h1 {
         font-size: 14px;
         text-align: center;
         margin-top: 10px;
+        display: flex;
+        justify-content: center;
     }
 
-    .navbar ul {
-        flex-direction: column;
-    }
-
-    .navbar ul button {
-        width: 100%;
-        padding: 12px;
-        margin: 8px 0;
+    .banner {
+        padding: 20px;
     }
 
     .content h2 {
         font-size: 60px;
     }
 
-    .content p {
-        font-size: 18px;
-        line-height: 22px;
-    }
-
     .side {
-        top: 80%;
-        left: 50%;
-        transform: translateX(-50%);
+        padding: 15px;
+    
     }
 
-    .side ul li {
-        margin: 5px;
+    .side li {
+        font-size: 14px;
+        display: inline;
     }
 
-    .side ul li a {
-        font-size: 16px;
-        padding: 8px 16px;
+    .side a {
+        font-size: 14px;
+        padding: 8px;
     }
 
-    .banner {
-        height: 60vh;
+    .navbar img {
+        width: 40px;
+        height: auto;
     }
 
-    .Logo {
-        width: 120px;
-        height: 90px;
+    button {
+        font-size: 12px;
+        padding: 8px 15px;
+    }
+
+    ul {
+        flex-direction: column;
+        align-items: center;
     }
 }
 
-@media (max-width: 480px) {
-    
-    .navbar ul button {
-        padding: 10px;
+/* Medium Devices (Mobile Landscape) */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        display: flex;
     }
 
-    
     .content h2 {
-        font-size: 45px;
+        font-size: 42px;
     }
 
-    .content p {
+    .side {
+        padding: 15px;
+    }
+
+    .side a {
         font-size: 16px;
-        line-height: 20px;
+        display: flex;
     }
 
-    .side ul li a {
-        font-size: 14px;
-        padding: 6px 12px;
+    button {
+        font-size: 13px;
+        padding: 6px 8px;
+    }
+}
+
+/* Large Devices (Tablets and Up) */
+@media (min-width: 1024px) {
+    .navbar {
+        flex-direction: row;
     }
 
-    .banner {
-        height: 50vh; 
+    .content h2 {
+        font-size: 60px;
     }
+
+    button {
+        font-size: 16px;
+        padding: 10px 20px;
+    }
 }
